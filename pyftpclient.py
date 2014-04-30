@@ -8,6 +8,7 @@ import ftplib
 import socket
 import time
 
+
 def setInterval(interval, times = -1):
     # This will be the actual decorator,
     # with fixed interval and times parameter
@@ -86,7 +87,7 @@ class PyFTPclient:
                 try:
                     connect()
                     self.waiting = False
-                    # retrive file from position where we were disconnected
+                    # retrieve file from position where we were disconnected
                     res = ftp.retrbinary('RETR %s' % dst_filename, f.write) if f.tell() == 0 else \
                               ftp.retrbinary('RETR %s' % dst_filename, f.write, rest=f.tell())
 
