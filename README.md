@@ -5,6 +5,6 @@ FTP client written in python with monitoring and reconnection; it utilises the f
 
 Features:
 - it shows download progress,
-- it changes socets settings for optimal download,  
+- it changes socket settings for optimal download,  
 - it monitors status of the FTP connection
-- it can reconnect and download file from the point of reconnect.  
+- it can reconnect and download file from the point of disconnect.  
