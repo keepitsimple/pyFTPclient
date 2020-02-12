@@ -36,7 +36,7 @@ def setInterval(interval, times = -1):
 
 
 class PyFTPclient:
-    def __init__(self, host, port, login, passwd, monitor_interval = 30):
+    def __init__(self, host, port = 21, login = 'anonymous', passwd = 'anonymous', monitor_interval = 30):
         self.host = host
         self.port = port
         self.login = login
@@ -119,7 +119,7 @@ class PyFTPclient:
 if __name__ == "__main__":
     #        logging.basicConfig(filename='/var/log/dreamly.log',format='%(asctime)s %(levelname)s: %(message)s',level=logging.DEBUG)
     logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', level=cfg.logging.level)
-    obj = PyFTPclient('192.168.0.59', 2121, 'test', 'testftp')
+    obj = PyFTPclient('192.168.0.59', port = 2121, login = 'test', passwd = 'testftp')
     obj.DownloadFile('USAHD-8974-20131013-0300-0330.ts')
 
 
